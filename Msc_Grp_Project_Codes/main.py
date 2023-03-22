@@ -42,7 +42,7 @@ with open('classes.txt','r') as f:
 
 
 print(classnames[0])
-class NanorApp(App):
+class UoBGrp14App(App):
     def build(self):
         # color sequence is RGB for the first 3 digits
         Window.clearcolor = (1, 1, 0, 1)
@@ -141,4 +141,4 @@ class NanorApp(App):
 
 
 if __name__ == "__main__":
-    NanorApp().run()
+    UoBGrp14App().run()
