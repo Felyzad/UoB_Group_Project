@@ -45,13 +45,13 @@ print(classnames[0])
 class UoBGrp14App(App):
     def build(self):
         # color sequence is RGB for the first 3 digits
-        Window.clearcolor = (1, 1, 0, 1)
+        Window.clearcolor = (0, 0, 0, 0)
         # Window.size = (1920,1080)
         # self.icon = (r'C:\Users\NANOR\Desktop\pictures\htulogo.png')
 
         self.cam_img = Image(size_hint=(1, 1))
-        self.label = Label(text='Human Counting', size_hint=(1, 0.1), font_size=40,
-                           italic=0, bold=1,color=(1,0,0,1))
+        self.label = Label(text='REAL-TIME HUMAN DETECTION & COUNTING', size_hint=(1, 0.1), font_size=35,
+                           italic=0, bold=1,color=(0,1,0,1))
 
 
         layout = BoxLayout(orientation='vertical')
@@ -82,7 +82,7 @@ class UoBGrp14App(App):
                 class_detect = classnames[class_detect]
                 conf = math.ceil(confidence * 100)
 
-                if class_detect == 'person'  and conf > 60:
+                if class_detect == 'person'  and conf > 70:
                     x1, y1,x2, y2 = int(x1), int(y1), int(x2), int(y2)
 
 
